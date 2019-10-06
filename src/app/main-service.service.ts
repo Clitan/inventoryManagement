@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { purchase } from './Interface/purchase';
 import { sale } from './Interface/sale';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,20 @@ salesData: sale[] = [{
   billDate: "20-7-2019"
 },]
   constructor(private route:Router) {
+   }
+
+   showDialogBox(Message :string , type:any){
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    })
+    
+    Toast.fire({
+      type: type,
+      title: Message
+    })
    }
 
 }

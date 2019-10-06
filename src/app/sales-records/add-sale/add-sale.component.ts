@@ -34,8 +34,8 @@ export class AddSaleComponent implements OnInit {
 
   addNewSale() {
     this.service.salesData.push(this.newSale.value);
+    this.service.showDialogBox('Successfuly added','success')
     this.back();
-    console.log(this.newSale.value)
   }
 
   back() {

@@ -1,27 +1,33 @@
-.formContent{
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    p {
-        text-align: center;
-        padding: 10px;
-        margin-top: 10%;
-      }
-    
-      form {
-        text-align: center;
-    
-        input {
-          padding: 15px;
-          margin:4%;
-        }
-    
-        .addNew {
-          cursor: pointer;
-          display: flex;
-          margin: auto;
-          padding: 2%;
-        }
-      }
+.formContent {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10%;
+  }
+
+  form {
+    text-align: center;
+
+    input {
+      padding: 15px;
+      margin: 4%;
+    }
+
+    .date {
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+
+    .addNew {
+      cursor: pointer;
+      display: flex;
+      margin: auto;
+      padding: 2%;
+    }
+  }
 }

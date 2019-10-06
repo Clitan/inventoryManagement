@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SalesTableComponent } from '../sales-records/sales-table/sales-table.component';
 import { PurchaseAddComponent } from './purchase-add/purchase-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -19,7 +21,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule 
+
+  ],
+  providers:[  MatDatepickerModule]
 })
 export class PurchaseRecordsModule { }

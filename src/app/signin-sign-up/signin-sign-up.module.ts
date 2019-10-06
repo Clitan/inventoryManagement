@@ -7,13 +7,14 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 
+
 @NgModule({
   declarations: [SignInComponent, LayoutComponent],
   imports: [
     CommonModule,
     SigninSignUpRoutingModule,
-    ReactiveFormsModule,
     MatFormFieldModule,
+    ReactiveFormsModule
   ]
 })
 export class SigninSignUpModule { }

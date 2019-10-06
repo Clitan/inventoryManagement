@@ -5,7 +5,7 @@
         <input placeholder="Customer Name" [formControl]="customer" maxlength=15  type="text">
         <input placeholder="Item Name" [formControl]="item" maxlength=15  type="text">
         <input placeholder="Quantity" [formControl]="quantity">
-        <input placeholder="BillDate" [formControl]="billdate">
+        <input placeholder="BillDate" class="date" [formControl]="billdate" type="date" >
 
         <button class="btn btn-info addNew" [disabled]="newSale.invalid" (click)="addNewSale()">Add new Sale</button>
     </form>

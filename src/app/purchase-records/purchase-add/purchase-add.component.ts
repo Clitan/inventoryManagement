@@ -20,10 +20,11 @@ export class PurchaseAddComponent implements OnInit {
     Validators.pattern('[a-zA-z]*')
   ]);
   billdate: FormControl = new FormControl("",
+    Validators.required
   );
-  quantity: FormControl = new FormControl("",[
+  quantity: FormControl = new FormControl("", [
     Validators.required,
-  Validators.pattern('[0-9]*')]);
+    Validators.pattern('[0-9]*')]);
 
   newPurchase: FormGroup = new FormGroup({
     id: this.Id,
@@ -39,7 +40,7 @@ export class PurchaseAddComponent implements OnInit {
 
   addNewPurchase() {
     this.service.purchaseData.push(this.newPurchase.value);
-    console.log("new purchase:" + this.newPurchase.value);
+    this.service.showDialogBox('Successfuly added', 'success')
     this.back();
   }
 
