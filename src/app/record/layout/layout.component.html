@@ -1,0 +1,24 @@
+<mat-toolbar class="example-header">
+    <!-- <button mat-icon-button (click)="toggle_side_nav()"><mat-icon>menu</mat-icon> </button> -->
+    <h1 class="logOut text-info">user</h1>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]="options.value.fixed"
+        [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
+        <ul class="navList">
+            <li class="Logo" *ngIf="user">{{user}}</li>
+            <li class="navItem active" [ngClass]="{'active': navActive}" (click)="ActiveNav('Purchase')">Purchase</li>
+            <li class="navItem" [ngClass]="{'active': !navActive}" (click)="ActiveNav('Sale')">Sale</li>
+        </ul>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="tableData">
+            <!-- <button class="btn btn-info float-right add" (click)="addNew()">New</button> -->
+            <router-outlet></router-outlet>
+        </div>
+    
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

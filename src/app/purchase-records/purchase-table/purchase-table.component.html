@@ -1,0 +1,21 @@
+<button class="btn btn-info m-2 float-right add" (click)="addNew()">Add</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">suplier</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">quantity</th>
+      <th scope="col">bill date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of purchase_data;index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{data.suplier}}</td>
+      <td>{{data.itemName}}</td>
+      <td>{{data.quantity}}</td>
+      <td>{{data.billDate}}</td>
+    </tr>
+  </tbody>
+</table>

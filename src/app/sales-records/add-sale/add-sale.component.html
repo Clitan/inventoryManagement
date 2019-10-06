@@ -1,0 +1,12 @@
+<button class="btn btn-info m-2 float-right add" (click)="back()">back</button>
+<div class="formContent">
+    <form name="form" [formGroup]="newSale">
+
+        <input placeholder="Customer Name" [formControl]="customer" maxlength=15 required type="text">
+        <input placeholder="Item Name" [formControl]="item" maxlength=15 required type="text">
+        <input placeholder="Quantity" [formControl]="quantity">
+        <input placeholder="BillDate" [formControl]="billdate">
+
+        <button class="btn btn-info addNew" (click)="addNewSale()">Add new Purchase</button>
+    </form>
+</div>
