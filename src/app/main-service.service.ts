@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { purchase } from './Interface/purchase';
 import { sale } from './Interface/sale';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +37,7 @@ salesData: sale[] = [{
   quantity: 1,
   billDate: "20-7-2019"
 },]
-  constructor() { }
+  constructor(private route:Router) {
+   }
+
 }

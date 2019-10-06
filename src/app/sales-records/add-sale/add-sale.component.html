@@ -1,4 +1,4 @@
-<button class="btn btn-info m-2 float-right add" (click)="back()">back</button>
+<button class="btn btn-info m-2 float-left add" (click)="back()">back</button>
 <div class="formContent">
     <form name="form" [formGroup]="newSale">
 
@@ -7,6 +7,6 @@
         <input placeholder="Quantity" [formControl]="quantity">
         <input placeholder="BillDate" [formControl]="billdate">
 
-        <button class="btn btn-info addNew" [disabled]="newSale.invalid" (click)="addNewSale()">Add new Purchase</button>
+        <button class="btn btn-info addNew" [disabled]="newSale.invalid" (click)="addNewSale()">Add new Sale</button>
     </form>
 </div>

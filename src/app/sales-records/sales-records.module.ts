@@ -5,6 +5,8 @@ import { SalesRecordsRoutingModule } from './sales-records-routing.module';
 import { AddSaleComponent } from './add-sale/add-sale.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SalesTableComponent } from './sales-table/sales-table.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { SalesTableComponent } from './sales-table/sales-table.component';
   imports: [
     CommonModule,
     SalesRecordsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule
   ]
 })
 export class SalesRecordsModule { }
