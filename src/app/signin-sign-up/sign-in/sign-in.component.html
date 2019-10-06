@@ -1,4 +1,4 @@
-<div class="sigin-up-content">
+<div class="sigin-content">
     <p>LOGIN</p>
     <form name="form" [formGroup]="form">
 
@@ -7,7 +7,7 @@
 
         <input placeholder="password" [formControl]="Password" maxlength=5 minlength="5" type="password">
         <div class="submit">
-            <button (click)="submit()" [disabled]="form.invalid" class="btn btn-info sign-up">LOGIN</button>
+            <button (click)="submit()" [disabled]="form.invalid" class="btn btn-info sign-in">LOGIN</button>
         </div>
     </form>
 </div>

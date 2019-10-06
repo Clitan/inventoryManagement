@@ -1,4 +1,4 @@
-.sigin-up-content {
+.sigin-content {
   p {
     text-align: center;
     padding: 10px;
@@ -19,9 +19,8 @@
 
     .submit {
       display: flex;
-    
-
-      .sign-up {
+      cursor: pointer;
+      .sign-in {
         margin: auto;
         padding: 15px;
       }

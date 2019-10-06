@@ -40,7 +40,7 @@ export class SignInComponent implements OnInit {
       this.router.navigate(['/record'])
       this.service.loginUserName = this.user.value;
       Swal.fire(
-        'login succesful!',
+        'successfully logged in',
         '',
         'success'
       )
