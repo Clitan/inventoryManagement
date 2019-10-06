@@ -15,16 +15,9 @@ export class MainServiceService {
     billDate: "20-7-2019"
   },
   {
-    id: 1,
+    id: 2,
     suplier: 'clitan',
-    itemName: 'food',
-    quantity: 1,
-    billDate: "20-7-2019"
-  },
-  {
-    id: 1,
-    suplier: 'clitan',
-    itemName: 'food',
+    itemName: 'cold',
     quantity: 1,
     billDate: "20-7-2019"
   }
@@ -37,7 +30,7 @@ salesData: sale[] = [{
   quantity: 1,
   billDate: "20-7-2019"
 },{
-  id: 1,
+  id: 2,
   customer: 'clitan',
   itemName: 'food',
   quantity: 1,

@@ -10,20 +10,23 @@ import { Router } from '@angular/router';
 })
 export class PurchaseAddComponent implements OnInit {
 
-  item: FormControl = new FormControl("",[
+  Id: FormControl = new FormControl('' + this.service.purchaseData.length + 1)
+  item: FormControl = new FormControl("", [
     Validators.required,
     Validators.pattern('[a-zA-z]*')
   ]);
-  supplier: FormControl = new FormControl("",[
+  supplier: FormControl = new FormControl("", [
     Validators.required,
     Validators.pattern('[a-zA-z]*')
   ]);
   billdate: FormControl = new FormControl("",
-   );
-  quantity: FormControl = new FormControl("",
-    Validators.required);
+  );
+  quantity: FormControl = new FormControl("",[
+    Validators.required,
+  Validators.pattern('[0-9]*')]);
 
   newPurchase: FormGroup = new FormGroup({
+    id: this.Id,
     suplier: this.supplier,
     itemName: this.item,
     quantity: this.quantity,
@@ -36,6 +39,7 @@ export class PurchaseAddComponent implements OnInit {
 
   addNewPurchase() {
     this.service.purchaseData.push(this.newPurchase.value);
+    console.log("new purchase:" + this.newPurchase.value);
     this.back();
   }
 

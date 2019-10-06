@@ -2,11 +2,11 @@
 <div class="formContent">
     <form name="form" [formGroup]="newSale">
 
-        <input placeholder="Customer Name" [formControl]="customer" maxlength=15 required type="text">
-        <input placeholder="Item Name" [formControl]="item" maxlength=15 required type="text">
+        <input placeholder="Customer Name" [formControl]="customer" maxlength=15  type="text">
+        <input placeholder="Item Name" [formControl]="item" maxlength=15  type="text">
         <input placeholder="Quantity" [formControl]="quantity">
         <input placeholder="BillDate" [formControl]="billdate">
 
-        <button class="btn btn-info addNew" (click)="addNewSale()">Add new Purchase</button>
+        <button class="btn btn-info addNew" [disabled]="newSale.invalid" (click)="addNewSale()">Add new Purchase</button>
     </form>
 </div>

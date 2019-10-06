@@ -9,17 +9,19 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./add-sale.component.scss']
 })
 export class AddSaleComponent implements OnInit {
-
+  Id: FormControl = new FormControl('' + this.service.salesData.length+1);
   item: FormControl = new FormControl("",
     Validators.required);
   customer: FormControl = new FormControl("",
     Validators.required);
   billdate: FormControl = new FormControl("",
     Validators.required);
-  quantity: FormControl = new FormControl("",
-    Validators.required);
+  quantity: FormControl = new FormControl("", [
+    Validators.required,
+    Validators.pattern('[0-9]*')]);
 
   newSale: FormGroup = new FormGroup({
+    id: this.Id,
     customer: this.customer,
     itemName: this.item,
     quantity: this.quantity,
@@ -31,11 +33,9 @@ export class AddSaleComponent implements OnInit {
   }
 
   addNewSale() {
-    this.newSale.patchValue({
-
-    })
     this.service.salesData.push(this.newSale.value);
     this.back();
+    console.log(this.newSale.value)
   }
 
   back() {

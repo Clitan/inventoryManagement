@@ -69,6 +69,7 @@ mat-sidenav-content,
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 
   .tableData {
     height: 80%;
@@ -77,6 +78,7 @@ mat-sidenav-content,
     box-shadow: 10px 10px 5px #111;
     border-radius: 15px;
     padding: 15px;
+    overflow: auto;
 
     .add{
       padding: 15px;
