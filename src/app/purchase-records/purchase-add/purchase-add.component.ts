@@ -10,12 +10,16 @@ import { Router } from '@angular/router';
 })
 export class PurchaseAddComponent implements OnInit {
 
-  item: FormControl = new FormControl("",
-    Validators.required);
-  supplier: FormControl = new FormControl("",
-    Validators.required);
+  item: FormControl = new FormControl("",[
+    Validators.required,
+    Validators.pattern('[a-zA-z]*')
+  ]);
+  supplier: FormControl = new FormControl("",[
+    Validators.required,
+    Validators.pattern('[a-zA-z]*')
+  ]);
   billdate: FormControl = new FormControl("",
-    Validators.required);
+   );
   quantity: FormControl = new FormControl("",
     Validators.required);
 

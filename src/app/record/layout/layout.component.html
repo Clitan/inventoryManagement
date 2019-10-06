@@ -1,7 +1,3 @@
-<mat-toolbar class="example-header">
-    <!-- <button mat-icon-button (click)="toggle_side_nav()"><mat-icon>menu</mat-icon> </button> -->
-    <h1 class="logOut text-info">user</h1>
-</mat-toolbar>
 
 <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]="options.value.fixed"
@@ -15,7 +11,6 @@
 
     <mat-sidenav-content>
         <div class="tableData">
-            <!-- <button class="btn btn-info float-right add" (click)="addNew()">New</button> -->
             <router-outlet></router-outlet>
         </div>
     

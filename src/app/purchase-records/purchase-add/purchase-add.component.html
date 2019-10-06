@@ -7,6 +7,6 @@
         <input placeholder="Quantity" [formControl]="quantity">
         <input placeholder="BillDate(dd-mm-yyyy)" minlength="10" maxlength="10" [formControl]="billdate">
 
-        <button class="btn btn-info addNew" disabled="newPurchase.invalid" (click)="addNewPurchase()">Add new Purchase</button>
+        <button class="btn btn-info addNew" [disabled]="newPurchase.invalid" (click)="addNewPurchase()">Add new Purchase</button>
     </form>
 </div>
